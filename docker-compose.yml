@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  # docker-compose run terraform <sub command>
+  terraform:
+    image: hashicorp/terraform:latest
+    volumes:
+      - ".:/terraform"
+      - "~/.aliyun:/root/.aliyun"
+    working_dir: /terraform
